@@ -1,14 +1,15 @@
 import os
 import streamlit as st
-from PyPDF2 import PdfReader
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.llms import OpenAI
+from dotenv import load_dotenv
+from pypdf import PdfReader
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_text_splitters import CharacterTextSplitter
+from langchain_openai import OpenAI
 from langchain.chains import RetrievalQA
 
 # CONFIG
-os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY_HERE"
+load_dotenv()
 
 st.set_page_config(
     page_title="Academic Paper Summarizer",
@@ -62,7 +63,7 @@ else:
             - Conclusion
             """
 
-            summary = qa_chain.run(query)
+            summary = qa_chain.invoke(query)
 
         st.subheader("📌 Paper Summary")
-        st.write(summary)
+        st.write(summary["result"])
