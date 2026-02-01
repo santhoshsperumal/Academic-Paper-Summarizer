@@ -1,155 +1,127 @@
-📚 Academic Paper Summarizer using RAG
+# 📚 Academic Paper Summarizer using RAG
 
-GenAI-Powered Research Paper Summarization System
+**GenAI-Powered Research Paper Summarization System**
 
-The Academic Paper Summarizer is an intelligent system that generates accurate, structured summaries of academic research papers using Retrieval-Augmented Generation (RAG).
-Instead of relying on generic summarization, the system retrieves the most relevant sections from research papers and uses a Large Language Model (LLM) to produce concise, context-aware summaries.
+The **Academic Paper Summarizer** is an intelligent system that
+generates accurate, structured summaries of academic research papers
+using **Retrieval-Augmented Generation (RAG)**.\
+Instead of relying on generic summarization, the system retrieves the
+most relevant sections from research papers and uses a Large Language
+Model (LLM) to produce concise, context-aware summaries.
 
-This project demonstrates how Generative AI combined with vector search can significantly improve the reliability and quality of academic document summarization.
+------------------------------------------------------------------------
 
-🎯 Project Objective
+## 🎯 Project Objective
 
-To build an AI-powered academic summarization tool that:
+To build an AI-powered academic summarization tool that: - Understands
+long research papers\
+- Retrieves the most relevant content\
+- Produces accurate, structured summaries\
+- Reduces hallucinations common in naive LLM summarization
 
-Understands long research papers
+------------------------------------------------------------------------
 
-Retrieves the most relevant content
+## 🔍 Key Features
 
-Produces accurate, structured summaries
+-   PDF-based academic paper input\
+-   Automatic document chunking\
+-   Embedding generation for semantic search\
+-   FAISS-based vector database integration\
+-   Retrieval-Augmented Generation (RAG) pipeline\
+-   Context-aware and accurate summaries\
+-   Structured output (Abstract-style summary)\
+-   Interactive web interface using Streamlit
 
-Reduces hallucinations common in naive LLM summarization
+------------------------------------------------------------------------
 
-🔍 Key Features
+## 🧠 How It Works
 
-PDF-based academic paper input
+1.  User uploads an academic research paper (PDF)\
+2.  System extracts text from the PDF\
+3.  Document is split into meaningful chunks\
+4.  Each chunk is converted into vector embeddings\
+5.  Embeddings are stored in a FAISS vector database\
+6.  Relevant chunks are retrieved\
+7.  Retrieved context is passed to the LLM\
+8.  LLM generates a structured summary
 
-Automatic document chunking
+------------------------------------------------------------------------
 
-Embedding generation for semantic search
+## ⚙️ System Workflow
 
-FAISS-based vector database integration
+User\
+→ PDF Upload\
+→ Text Extraction\
+→ Chunking & Embedding\
+→ FAISS Vector Database\
+→ RAG Retriever\
+→ LLM\
+→ Structured Summary
 
-Retrieval-Augmented Generation (RAG) pipeline
+------------------------------------------------------------------------
 
-Context-aware and accurate summaries
+## 🧪 RAG Implementation
 
-Structured output (Abstract-style summary)
+Retrieval-Augmented Generation (RAG) improves summarization accuracy by
+grounding the LLM's output in retrieved sections from the original
+paper, ensuring factual consistency and reduced hallucinations.
 
-Interactive web interface using Streamlit
+------------------------------------------------------------------------
 
-🧠 How It Works (System Flow)
+## 📌 Example Output
 
-User uploads an academic research paper (PDF)
+-   Paper Overview\
+-   Research Problem\
+-   Methodology\
+-   Key Findings\
+-   Conclusion & Contributions
 
-System extracts text from the PDF
+------------------------------------------------------------------------
 
-Document is split into meaningful chunks
+## 🛠 Technology Stack
 
-Each chunk is converted into vector embeddings
+### Frontend
 
-Embeddings are stored in a FAISS vector database
+-   Streamlit
 
-Relevant chunks are retrieved based on the query
+### Backend / AI Layer
 
-Retrieved context is passed to the LLM
+-   Python\
+-   Large Language Model (LLM)\
+-   Retrieval-Augmented Generation (RAG)
 
-LLM generates a high-quality, structured summary
+### Vector Database
 
-⚙️ System Workflow
+-   FAISS
 
-User
-→ Uploads PDF
-→ Text Extraction Module
-→ Chunking & Embedding Generation
-→ FAISS Vector Database
-→ RAG Retriever
-→ LLM
-→ Structured Academic Summary
+### Tools
 
-🧪 RAG Implementation
+-   VS Code\
+-   GitHub
 
-Retrieval-Augmented Generation (RAG) enhances summarization accuracy by grounding the LLM’s output in retrieved content from the original paper.
-Instead of summarizing the entire document blindly, the system:
+------------------------------------------------------------------------
 
-Retrieves only the most relevant sections
+## ▶️ How to Run
 
-Supplies them as context to the LLM
-
-Ensures factual consistency and reduced hallucinations
-
-📌 Example Output
-
-Paper Overview
-
-Research Problem
-
-Methodology
-
-Key Findings
-
-Conclusion & Contributions
-
-(All summaries are generated dynamically based on the uploaded paper.)
-
-🆚 Comparison with Traditional Summarizers
-
-Traditional summarization tools:
-
-Process the entire document at once
-
-Often miss important details
-
-Are prone to hallucinations
-
-This RAG-based system provides:
-
-Context-aware summarization
-
-Higher factual accuracy
-
-Better handling of long documents
-
-Structured and readable summaries
-
-🛠 Technology Stack
-
-Streamlit (Web Interface)
-
-PDF Upload Interface
-
-Python
-
-Large Language Model (LLM)
-
-Retrieval-Augmented Generation (RAG)
-
-FAISS
-
-Tools:
-
-VS Code
-
-GitHub
-
-▶️ How to Run the Project
+``` bash
 pip install -r requirements.txt
 streamlit run app.py
+```
 
-🚀 Future Enhancements
+------------------------------------------------------------------------
 
-Multi-document comparison and summarization
+## 🚀 Future Enhancements
 
-Section-wise summaries (Methodology, Results, etc.)
+-   Multi-document summarization\
+-   Section-wise summaries\
+-   Citation-aware summaries\
+-   Multi-language support\
+-   Export summaries as PDF/DOCX
 
-Citation-aware summaries
+------------------------------------------------------------------------
 
-Support for multiple languages
+## ✅ Conclusion
 
-Export summaries as PDF / DOCX
-
-Integration with academic databases (arXiv, IEEE, Springer)
-
-✅ Conclusion
-
-The Academic Paper Summarizer using RAG demonstrates how combining Generative AI with Retrieval-Augmented Generation leads to more accurate, reliable, and structured academic summaries.
-This project highlights a scalable and practical approach to applying AI in research, education, and knowledge management.
+This project demonstrates how **RAG + GenAI** can produce reliable,
+accurate, and structured academic summaries, making it a powerful tool
+for researchers and students.
